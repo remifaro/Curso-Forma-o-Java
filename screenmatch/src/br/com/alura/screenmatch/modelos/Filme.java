@@ -1,13 +1,19 @@
+package br.com.alura.screenmatch.modelos;
+
 public class Filme {
-    String nome;
-    int anoDeLancamento;
-    boolean incluidoNoPlano;
-    double somaDasAvaliacoes;
-    int totalDeAvaliacoes;
+    public String nome;
+    public int anoDeLancamento;
+    public boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
     int duracaoEmMinutos;
 
+    public int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
+    }
+
     // É void pois não retorna nada
-    void exibeFichaTecnica() {
+    public void exibeFichaTecnica() {
         System.out.println("Nome do filme: " + nome);
         System.out.println("Ano de Lançamento: " + anoDeLancamento);
         System.out.println("Está incluído no plano? " + incluidoNoPlano);
@@ -17,13 +23,13 @@ public class Filme {
     }
 
     // É void pois não retorna nada
-    void avalia(double nota){
+    public void avalia(double nota){
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
 
     // Não é void pois ele retorna algo, que no caso é um double
-    double pegaMedia(){
+    public double pegaMedia(){
         return somaDasAvaliacoes/totalDeAvaliacoes;
     }
 }
