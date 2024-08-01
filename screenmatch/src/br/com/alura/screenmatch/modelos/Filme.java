@@ -3,13 +3,45 @@ package br.com.alura.screenmatch.modelos;
 public class Filme {
     public String nome;
     public int anoDeLancamento;
-    public boolean incluidoNoPlano;
+    private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
-    int duracaoEmMinutos;
+    private int duracaoEmMinutos;
 
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+
+    public int getAnodeLancamento(){
+        return anoDeLancamento;
+    }
+
+    public boolean getIncluidoNoPlano(){
+        return incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos(){
+        return duracaoEmMinutos;
+    }
+
+    public void setNome(nome){
+        this.nome = nome;
+    }
+
+    public void setAnoDeLancamento(anoDeLancamento){
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setIncluidoNoPlano(incluidoNoPlano){
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setDuracaoEmMinutos(set duracaoEmMinutos){
+        this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
     // É void pois não retorna nada
