@@ -1,46 +1,46 @@
 package br.com.alura.screenmatch.modelos;
 
-class public Titulo{
-public String nome;
+public class Titulo {
+    public String nome;
     public int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
-    public int getTotalDeAvaliacoes(){
+    public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
     }
 
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
 
-    public int getAnodeLancamento(){
+    public int getAnodeLancamento() {
         return anoDeLancamento;
     }
 
-    public boolean getIncluidoNoPlano(){
+    public boolean getIncluidoNoPlano() {
         return incluidoNoPlano;
     }
 
-    public int getDuracaoEmMinutos(){
+    public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
     }
 
-    public void setNome(nome){
+    public void setNome(String nome){
         this.nome = nome;
     }
 
-    public void setAnoDeLancamento(anoDeLancamento){
+    public void setAnoDeLancamento( int anoDeLancamento){
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public void setIncluidoNoPlano(incluidoNoPlano){
+    public void setIncluidoNoPlano(boolean incluidoNoPlano){
         this.incluidoNoPlano = incluidoNoPlano;
     }
 
-    public void setDuracaoEmMinutos(set duracaoEmMinutos){
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
@@ -55,13 +55,13 @@ public String nome;
     }
 
     // É void pois não retorna nada
-    public void avalia(double nota){
+    public void avalia(double nota) {
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
 
     // Não é void pois ele retorna algo, que no caso é um double
-    public double pegaMedia(){
-        return somaDasAvaliacoes/totalDeAvaliacoes;
+    public double pegaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 }
