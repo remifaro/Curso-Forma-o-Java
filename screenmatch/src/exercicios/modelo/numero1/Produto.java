@@ -6,7 +6,6 @@ package exercicios.modelo.numero1;
 public class Produto{
     private String nome;
     private double preco;
-    private int valorPercentual;
     private double desconto;
 
     public void setNome(String nome){
